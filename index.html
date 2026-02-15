@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Saylani Campus Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="#" alt="Saylani Logo" class="logo-img">
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <div class="left-content">
+                <h1 class="portal-title">Campus Portal</h1>
+                <p class="portal-desc">Manage reports, complaints<br>& events in one place.</p>
+            </div>
+            <!-- Decorative wave -->
+            <div class="wave-decoration">
+                <svg viewBox="0 0 500 200" preserveAspectRatio="none">
+                    <path d="M0,160 C100,180 200,100 300,120 C400,140 450,80 500,100 L500,200 L0,200 Z"
+                        fill="rgba(76, 175, 80, 0.08)" />
+                    <path d="M0,170 C120,190 220,120 320,140 C420,160 460,100 500,120 L500,200 L0,200 Z"
+                        fill="rgba(76, 175, 80, 0.12)" />
+                    <path d="M0,180 C140,200 240,140 340,160 C440,180 470,120 500,140 L500,200 L0,200 Z"
+                        fill="rgba(76, 175, 80, 0.18)" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Right Section - Login Form -->
+        <div class="right-section">
+            <div class="login-card">
+                <h2 class="login-title">Login</h2>
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" autocomplete="current-password">
+                    </div>
+                    <div class="role-toggle">
+                        <button type="button" class="role-btn active" id="studentBtn"
+                            onclick="window.location.href='student.html'">Student</button>
+                        <button type="button" class="role-btn" id="adminBtn"
+                            onclick="window.location.href='admin.html'">Admin</button>
+                    </div>
+                    <button type="submit" class="login-btn">Log In</button>
+                    <div class="google-signin">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google"
+                            class="google-icon">
+                        <span>Sign in an account</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Role toggle functionality
+        const studentBtn = document.getElementById('studentBtn');
+        const adminBtn = document.getElementById('adminBtn');
+
+        studentBtn.addEventListener('click', () => {
+            studentBtn.classList.add('active');
+            adminBtn.classList.remove('active');
+        });
+
+        adminBtn.addEventListener('click', () => {
+            adminBtn.classList.add('active');
+            studentBtn.classList.remove('active');
+        });
+    </script>
 </body>
+
 </html>
