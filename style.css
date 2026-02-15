@@ -1198,9 +1198,53 @@ body {
         gap: 10px;
     }
 
-    .urgency-options {
-        gap: 16px;
+    .complaint-urgency-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
     }
+
+    .my-complaints-table-header,
+    .my-complaints-row {
+        grid-template-columns: 40px 1fr 1fr 80px 50px;
+        padding: 10px 12px;
+    }
+
+    .my-complaints-table-header span,
+    .my-complaints-row span {
+        font-size: 0.72rem;
+    }
+}
+
+/* ===== Logout Button ===== */
+.logout-btn {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: #dc2626;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+    transition: all 0.25s ease;
+    z-index: 1000;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+    box-shadow: 0 6px 16px rgba(220, 38, 38, 0.35);
+    transform: translateY(-2px);
+}
+
+.logout-btn svg {
+    stroke: #ffffff;
 }
 
 /* ============================================= */
